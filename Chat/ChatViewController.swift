@@ -39,7 +39,6 @@ class ChatViewController: UIViewController {
                 self!.chatField.scrollRangeToVisible(bottom)
             }
         }
-        
     }
     
     // Events
