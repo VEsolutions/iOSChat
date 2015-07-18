@@ -35,6 +35,8 @@ class ChatViewController: UIViewController {
         self.socket.on("chat message") {[weak self] data, ack in
             if let name = data?[0] as? String {
                 self!.chatField.text = "\(self!.chatField.text) \n \(name)\n"
+                let bottom: NSRange = NSMakeRange(count(self!.chatField.text) - 1, count(self!.chatField.text) - 1)
+                self!.chatField.scrollRangeToVisible(bottom)
             }
         }
         
