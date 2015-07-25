@@ -13,7 +13,7 @@ class ChatViewController: UIViewController {
     @IBOutlet var chatField: UITextView!
     @IBOutlet var message: UITextField!
     
-    let socket = SocketIOClient(socketURL: "localhost:3000")
+    let socket = SocketIOClient(socketURL: "https://fierce-anchorage-6789.herokuapp.com")
     
     override func viewDidLoad() {
         super.viewDidLoad()
